@@ -9,3 +9,22 @@ function solution(number) {
   }
   return sum;
 }
+//coding challenge -2
+function digPow(n, p) {
+  let sum = 0,
+    rem = 0,
+    b = n,
+    k = 0,
+    x = n.toString().length;
+  for (let i = 0; x > 0; i++, x--) {
+    rem = (n % 10) ** (p + x - 1);
+    sum = sum + rem;
+    n = Math.floor(n / 10);
+  }
+  k = sum / b;
+  if (k === Math.floor(k)) {
+    return k;
+  } else {
+    return -1;
+  }
+}
