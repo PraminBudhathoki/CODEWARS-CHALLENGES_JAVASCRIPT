@@ -28,3 +28,13 @@ function digPow(n, p) {
     return -1;
   }
 }
+
+//coding challenge -3
+function findNextSquare(sq) {
+  let squareRoot = Math.sqrt(sq);
+  if (squareRoot === Math.trunc(squareRoot)) {
+    return (squareRoot + 1) ** 2;
+  } else {
+    return -1;
+  }
+}
